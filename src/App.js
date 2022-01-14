@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Base from "components/Base.jsx";
+import AppBar from "components/AppBar";
+import { lightTheme, darkTheme } from "theme/Themes";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [dark, setDark] = useState(true);
+
+	return (
+		<ThemeProvider theme={createTheme(lightTheme)}>
+			<AppBar dark={dark} setDark={setDark} />
+			<Base />
+		</ThemeProvider>
+	);
 }
 
 export default App;
