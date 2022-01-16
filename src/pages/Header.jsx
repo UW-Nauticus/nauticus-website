@@ -215,7 +215,7 @@ function Header() {
 								},
 							})}
 						>
-							Material Kit
+							UW Nauticus
 						</MKTypography>
 						<MKTypography
 							variant="body1"
@@ -224,13 +224,12 @@ function Header() {
 							pr={6}
 							mr={6}
 						>
-							The time is now for it be okay to be great. People
-							in this world shun people for being nice.
+							We make submarine go brr.
 						</MKTypography>
 						<Stack direction="row" spacing={1} mt={3}>
-							<MKButton color="white">Get Started</MKButton>
+							<MKButton color="white">Join Us</MKButton>
 							<MKButton variant="text" color="white">
-								Read more
+								Learn More
 							</MKButton>
 						</Stack>
 					</Grid>
