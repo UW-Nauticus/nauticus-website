@@ -131,7 +131,7 @@ function About() {
 								color="white"
 								href="#"
 							>
-								<i className="fab fa-slack" />
+								<i className="fab fa-github" />
 							</MKTypography>
 						</MKBox>
 					</Grid>
