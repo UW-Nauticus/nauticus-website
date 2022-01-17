@@ -35,7 +35,7 @@ function HorizontalTeamCard({ image, name, position, description, linkedin }) {
 							src={image}
 							alt={name}
 							width="100%"
-							borderRadius="md"
+							borderRadius="100%"
 							shadow="lg"
 						/>
 					</MKBox>
