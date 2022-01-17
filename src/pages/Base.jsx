@@ -149,7 +149,7 @@ function Base(props) {
 									<MKBox
 										component="i"
 										color="white"
-										className="fab fa-slack"
+										className="fab fa-github"
 									/>
 								</MKTypography>
 							</MKBox>
