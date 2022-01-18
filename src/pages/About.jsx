@@ -12,7 +12,7 @@ import CenteredFooter from "examples/Footers/CenteredFooter";
 
 // About Us page sections
 import Information from "pages/LandingPages/About/sections/Information";
-import Team from "pages/LandingPages/About/sections/Team";
+import Team from "pages/LandingPages/About/sections/TeamMembers";
 import Sponsors from "pages/LandingPages/About/sections/Sponsors";
 import Newsletter from "pages/LandingPages/About/sections/Newsletter";
 
