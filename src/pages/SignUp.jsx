@@ -32,7 +32,7 @@ const SignUp = () => {
 					placeItems: "center",
 				}}
 			>
-				<MKBox px={1} width="100%" mx="auto" position="relative">
+				<MKBox width="100%" mx="auto" position="relative">
 					<Grid
 						container
 						spacing={1}
