@@ -50,7 +50,7 @@ function CenteredFooter({ company, links, socials, light }) {
 
 	const renderSocials = socials.map((social) => (
 		<MKTypography
-			key={social.link}
+			key={social.name}
 			component={Link}
 			href={social.link}
 			variant="body2"
@@ -126,22 +126,27 @@ CenteredFooter.defaultProps = {
 		{
 			icon: <FacebookIcon fontSize="small" />,
 			link: "/",
+			name: "facebook",
 		},
 		{
 			icon: <TwitterIcon fontSize="small" />,
 			link: "/",
+			name: "twitter",
 		},
 		{
 			icon: <InstagramIcon fontSize="small" />,
 			link: "/",
+			name: "instagram",
 		},
 		{
 			icon: <PinterestIcon fontSize="small" />,
 			link: "/",
+			name: "pinterest",
 		},
 		{
 			icon: <GitHubIcon fontSize="small" />,
 			link: "/",
+			name: "github",
 		},
 	],
 	light: false,
