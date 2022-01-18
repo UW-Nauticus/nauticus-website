@@ -43,7 +43,7 @@ function Team() {
 		>
 			<Container>
 				<Grid container>
-					<Grid item xs={12} md={8} sx={{ mb: 6 }}>
+					<Grid item xs={12} md={12} sx={{ mb: 6 }}>
 						<MKTypography variant="h3" color="white">
 							Meet the Team Leads
 						</MKTypography>
