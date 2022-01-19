@@ -23,10 +23,9 @@ import Stack from "@mui/material/Stack";
 
 // @mui icons
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import PinterestIcon from "@mui/icons-material/Pinterest";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -125,13 +124,8 @@ CenteredFooter.defaultProps = {
 	socials: [
 		{
 			icon: <FacebookIcon fontSize="small" />,
-			link: "/",
+			link: "https://www.facebook.com/",
 			name: "facebook",
-		},
-		{
-			icon: <TwitterIcon fontSize="small" />,
-			link: "/",
-			name: "twitter",
 		},
 		{
 			icon: <InstagramIcon fontSize="small" />,
@@ -139,14 +133,14 @@ CenteredFooter.defaultProps = {
 			name: "instagram",
 		},
 		{
-			icon: <PinterestIcon fontSize="small" />,
-			link: "/",
-			name: "pinterest",
+			icon: <GitHubIcon fontSize="small" />,
+			link: "https://github.com/UW-Nauticus",
+			name: "github",
 		},
 		{
-			icon: <GitHubIcon fontSize="small" />,
-			link: "/",
-			name: "github",
+			icon: <YouTubeIcon fontSize="small" />,
+			link: "https://www.youtube.com/channel/UClLen4WNvXr1UgWIkF67nTw",
+			name: "youtube",
 		},
 	],
 	light: false,

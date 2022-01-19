@@ -126,22 +126,7 @@ function Base(props) {
 							<MKBox component="li">
 								<MKTypography
 									component={Link}
-									href="#"
-									variant="button"
-									p={1}
-									onClick={(e) => e.preventDefault()}
-								>
-									<MKBox
-										component="i"
-										color="white"
-										className="fab fa-discord"
-									/>
-								</MKTypography>
-							</MKBox>
-							<MKBox component="li">
-								<MKTypography
-									component={Link}
-									href="#"
+									href="https://github.com/UW-Nauticus"
 									variant="button"
 									p={1}
 									onClick={(e) => e.preventDefault()}
@@ -165,6 +150,21 @@ function Base(props) {
 										component="i"
 										color="white"
 										className="fab fa-instagram"
+									/>
+								</MKTypography>
+							</MKBox>
+							<MKBox component="li">
+								<MKTypography
+									component={Link}
+									href="https://www.youtube.com/channel/UClLen4WNvXr1UgWIkF67nTw"
+									variant="button"
+									p={1}
+									onClick={(e) => e.preventDefault()}
+								>
+									<MKBox
+										component="i"
+										color="white"
+										className="fab fa-youtube"
 									/>
 								</MKTypography>
 							</MKBox>
