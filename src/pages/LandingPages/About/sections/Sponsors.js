@@ -22,13 +22,6 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Images
-import coinbase from "assets/images/logos/gray-logos/logo-coinbase.svg";
-import nasa from "assets/images/logos/gray-logos/logo-nasa.svg";
-import netflix from "assets/images/logos/gray-logos/logo-netflix.svg";
-import pinterest from "assets/images/logos/gray-logos/logo-pinterest.svg";
-import spotify from "assets/images/logos/gray-logos/logo-spotify.svg";
-import vodafone from "assets/images/logos/gray-logos/logo-vodafone.svg";
-
 import engSoc from "assets/images/sponsors/engsoc.png";
 import uwEng from "assets/images/sponsors/uweng.jpeg";
 import weef from "assets/images/sponsors/weef.jpeg";
@@ -37,13 +30,9 @@ const Sponsors = () => {
 	return (
 		<MKBox component="section" pt={3}>
 			<Container>
-				<Grid
-					container
-					justifyContent="center"
-					sx={{ textAlign: "center" }}
-				>
+				<Grid container>
 					<Grid item xs={12} md={3}>
-						<MKBox p={2} textAlign="center" lineHeight={1}>
+						<MKBox p={2} lineHeight={1}>
 							<MKTypography variant="h3" mt={2} mb={8}>
 								Our Sponsors
 							</MKTypography>
