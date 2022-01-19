@@ -82,7 +82,8 @@ const FAQ = () => {
 					p: 2,
 					mx: { xs: 2, lg: 3 },
 					mt: -8,
-					mb: 4,
+					pb: 12,
+					pt: 8,
 					boxShadow: ({ boxShadows: { xxl } }) => xxl,
 				}}
 			>

@@ -26,7 +26,7 @@ import MKButton from "components/MKButton";
 
 function Newsletter() {
 	return (
-		<MKBox component="section" pt={6} my={6}>
+		<MKBox component="section" my={6}>
 			<Container>
 				<Grid
 					container
@@ -36,7 +36,7 @@ function Newsletter() {
 					justifyContent="center"
 				>
 					<Grid item>
-						<MKTypography variant="h4">
+						<MKTypography variant="h3">
 							News {"&"} Updates
 						</MKTypography>
 						<MKTypography variant="body2" color="text" mb={3}>
