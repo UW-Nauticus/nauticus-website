@@ -7,7 +7,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 // Material Kit 2 React components
 import MKTypography from "components/MKTypography";
 
-export default {
+const footerRoutes = {
 	brand: {
 		name: "UW Nauticus",
 		image: "logo",
@@ -66,3 +66,5 @@ export default {
 		</MKTypography>
 	),
 };
+
+export default footerRoutes;

@@ -29,7 +29,11 @@ import pinterest from "assets/images/logos/gray-logos/logo-pinterest.svg";
 import spotify from "assets/images/logos/gray-logos/logo-spotify.svg";
 import vodafone from "assets/images/logos/gray-logos/logo-vodafone.svg";
 
-function Featuring() {
+import engSoc from "assets/images/sponsors/engsoc.png";
+import uwEng from "assets/images/sponsors/uweng.jpeg";
+import weef from "assets/images/sponsors/weef.jpeg";
+
+const Sponsors = () => {
 	return (
 		<MKBox component="section" pt={3}>
 			<Container>
@@ -40,71 +44,67 @@ function Featuring() {
 				>
 					<Grid item xs={12} md={3}>
 						<MKBox p={2} textAlign="center" lineHeight={1}>
-							<MKTypography variant="h5" mt={2} mb={1}>
+							<MKTypography variant="h3" mt={2} mb={8}>
 								Our Sponsors
 							</MKTypography>
 						</MKBox>
 					</Grid>
 				</Grid>
 				<Grid container spacing={3} sx={{ mb: 12 }}>
-					<Grid item xs={6} md={4} lg={2}>
-						<MKBox
-							component="img"
-							src={coinbase}
-							alt="coinbase"
-							width="100%"
-							opacity={0.7}
-						/>
-					</Grid>
-					<Grid item xs={6} md={4} lg={2}>
-						<MKBox
-							component="img"
-							src={nasa}
-							alt="nasa"
-							width="100%"
-							opacity={0.7}
-						/>
-					</Grid>
-					<Grid item xs={6} md={4} lg={2}>
-						<MKBox
-							component="img"
-							src={netflix}
-							alt="netflix"
-							width="100%"
-							opacity={0.7}
-						/>
-					</Grid>
-					<Grid item xs={6} md={4} lg={2}>
-						<MKBox
-							component="img"
-							src={pinterest}
-							alt="pinterest"
-							width="100%"
-							opacity={0.7}
-						/>
-					</Grid>
-					<Grid item xs={6} md={4} lg={2}>
-						<MKBox
-							component="img"
-							src={spotify}
-							alt="spotify"
-							width="100%"
-							opacity={0.7}
-						/>
-					</Grid>
-					<Grid item xs={6} md={4} lg={2}>
-						<MKBox
-							component="img"
-							src={vodafone}
-							alt="vodafone"
-							width="100%"
-							opacity={0.7}
-						/>
+					<Grid container alignItems={"center"} spacing={6}>
+						<Grid
+							item
+							xs={12}
+							md={6}
+							style={{
+								display: "flex",
+								justifyContent: "center",
+							}}
+						>
+							<MKBox
+								component="img"
+								src={uwEng}
+								alt="software"
+								width="75%"
+							/>
+						</Grid>
+						<Grid
+							item
+							xs={12}
+							md={6}
+							style={{
+								display: "flex",
+								justifyContent: "center",
+							}}
+						>
+							<MKBox
+								component="img"
+								src={engSoc}
+								alt="software"
+								width="60%"
+							/>
+						</Grid>
+
+						<Grid
+							item
+							xs={12}
+							style={{
+								display: "flex",
+								justifyContent: "center",
+							}}
+						>
+							<MKBox
+								component="img"
+								src={weef}
+								alt="software"
+								width="50%"
+							/>
+						</Grid>
 					</Grid>
 				</Grid>
 			</Container>
 		</MKBox>
 	);
-}
+};
 
-export default Featuring;
+export default Sponsors;

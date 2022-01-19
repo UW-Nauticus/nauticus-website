@@ -164,7 +164,6 @@ function SubTeams() {
 								</MKTypography>
 							</Grid>
 						</Grid>
-						<br />
 					</Grid>
 				</Grid>
 			</Container>
