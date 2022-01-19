@@ -17,9 +17,18 @@ import footerRoutes from "footer.routes";
 import bgImage from "assets/images/bg-about-us.jpg";
 
 const QAndAs = [
-	{ question: "is allen good at math", answer: "pre good" },
-	{ question: "how big is Adrian", answer: "big enough" },
-	{ question: "can I join", answer: "ok" },
+	{
+		question: "Do I need to have prior experience to join the team?",
+		answer: "ABSOLUTELY NOT. UW Nauticus accepts all engineering students from any year. You just have to be committed to learning and helping out. Our team leads are always happy to help any member if they are stuck on a task. Our goal is to help you learn what you need so you can pass it down to future members.",
+	},
+	{
+		question: "Do I need to physically build the ROV?",
+		answer: "Although most members are interested in building the ROV, we have so many roles in the team that you can have a completely hands-off position. Consider joining our operations sub-team or taking a focus on vehicle design.",
+	},
+	{
+		question: "Can I join later in the term?",
+		answer: "Depending on your experience / what we're working on, we might ask you to wait until next the start of next term when we do orientation. But most terms we try to be accomodating so definitely reach out!",
+	},
 ];
 
 const FAQ = () => {
@@ -77,40 +86,36 @@ const FAQ = () => {
 					boxShadow: ({ boxShadows: { xxl } }) => xxl,
 				}}
 			>
-				{QAndAs.map((entry) => (
-					<MKBox
-						width="100%"
-						sx={{
-							backgroundSize: "cover",
-							backgroundPosition: "center",
-							display: "grid",
-							placeItems: "center",
-						}}
-					>
-						<MKTypography
-							variant="h3"
-							color="black"
-							sx={({ breakpoints, typography: { size } }) => ({
-								[breakpoints.down("md")]: {
-									fontSize: size["3xl"],
-								},
-							})}
-						>
-							{entry.question}
-						</MKTypography>
-						<MKTypography
-							variant="body2"
-							color="black"
-							sx={({ breakpoints, typography: { size } }) => ({
-								[breakpoints.down("md")]: {
-									fontSize: size["3xl"],
-								},
-							})}
-						>
-							{entry.answer}
-						</MKTypography>
-					</MKBox>
-				))}
+				<Grid container alignItems={"center"} spacing={4}>
+					{QAndAs.map((entry) => (
+						<Grid item xs={12}>
+							<MKBox
+								sx={{
+									backgroundSize: "cover",
+									backgroundPosition: "center",
+									display: "grid",
+									placeItems: "center",
+									left: "50%",
+									marginLeft: "5%",
+									marginRight: "5%",
+								}}
+							>
+								<MKTypography
+									variant="h3"
+									fontWeight="regular"
+									color="inherit"
+									sx={{ mb: "5px" }}
+								>
+									{entry.question}
+								</MKTypography>
+
+								<MKTypography variant="body2" color="text">
+									{entry.answer}
+								</MKTypography>
+							</MKBox>
+						</Grid>
+					))}
+				</Grid>
 			</Card>
 			<MKBox pt={6} px={1} mt={6}>
 				<CenteredFooter content={footerRoutes} />
