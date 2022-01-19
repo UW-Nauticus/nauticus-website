@@ -1,6 +1,6 @@
 // @mui icons
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
@@ -16,19 +16,19 @@ export default {
 	socials: [
 		{
 			icon: <FacebookIcon />,
-			link: "https://www.facebook.com/CreativeTim/",
+			link: "https://www.facebook.com/",
 		},
 		{
-			icon: <TwitterIcon />,
-			link: "https://twitter.com/creativetim",
+			icon: <InstagramIcon />,
+			link: "",
 		},
 		{
 			icon: <GitHubIcon />,
-			link: "https://github.com/creativetimofficial",
+			link: "https://github.com/UW-Nauticus",
 		},
 		{
 			icon: <YouTubeIcon />,
-			link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+			link: "https://www.youtube.com/channel/UClLen4WNvXr1UgWIkF67nTw",
 		},
 	],
 	menus: [

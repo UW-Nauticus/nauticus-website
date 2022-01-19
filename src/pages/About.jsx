@@ -106,18 +106,18 @@ function About() {
 								component="a"
 								variant="body1"
 								color="white"
-								href="#"
+								href="https://github.com/UW-Nauticus"
 								mr={3}
 							>
-								<i className="fab fa-discord" />
+								<i className="fab fa-github" />
 							</MKTypography>
 							<MKTypography
 								component="a"
 								variant="body1"
 								color="white"
-								href="#"
+								href="https://www.youtube.com/channel/UClLen4WNvXr1UgWIkF67nTw"
 							>
-								<i className="fab fa-github" />
+								<i className="fab fa-youtube" />
 							</MKTypography>
 						</MKBox>
 					</Grid>
