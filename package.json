@@ -29,7 +29,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "validate": "FORCE_COLOR=1 npm-run-all --parallel --aggregate-output --print-label test"
+    "prettier": "prettier \"**/*.{js,jsx,ts,tsx,html,vue,css,less,scss,graphql,yaml,yml,json,md,mdx}\"",
+    "check:format": "npm run prettier -- --check",
+    "check:types": "tsc --project tsconfig.json",
+    "check:spelling": "cspell --show-context --no-progress \"**\"",
+    "check:lint": "eslint .",
+    "fix:format": "npm run prettier -- --write",
+    "fix:lint": "npm run check:lint -- --fix",
+    "validate": "FORCE_COLOR=1 npm-run-all --parallel --aggregate-output --print-label check:*"
   },
   "eslintConfig": {
     "extends": [
