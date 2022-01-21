@@ -1,7 +1,3 @@
 node_modules/
 package*.json
-.husky/
-
-# Ignore artifacts:
-build
-coverage
+.next/

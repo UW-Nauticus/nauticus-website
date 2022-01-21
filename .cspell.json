@@ -3,9 +3,9 @@
   "version": "0.2",
   "language": "en",
   "allowCompoundWords": true,
-  "ignorePaths": [".husky", "node_modules", "cspell.json", "*.tsbuildinfo", "package-lock.json", "yarn.lock"],
+  "ignorePaths": [".husky", ".next", "node_modules", "cspell.json", "*.tsbuildinfo", "package-lock.json", "yarn.lock"],
   // words - list of words to be always considered correct
-  "words": ["visualstudio", "nauticus"],
+  "words": ["visualstudio", "nauticus", "vercel"],
   // flagWords - list of words to be always considered incorrect
   // This is useful for offensive words and common spelling errors.
   // For example "hte" should be "the"
