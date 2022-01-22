@@ -8,7 +8,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React examples
-import CenteredFooter from "examples/Footers/CenteredFooter";
+import CenteredFooter from "pages/Footers";
 
 // Routes
 import footerRoutes from "footer.routes";

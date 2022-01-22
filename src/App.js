@@ -6,13 +6,13 @@ import { ThemeProvider } from "@mui/material/styles";
 
 import theme from "assets/theme";
 
-import About from "pages/About";
+import About from "pages/About/About";
 import Base from "pages/Base";
 import Contact from "pages/Contact";
 import faq from "pages/FAQ";
 import Header from "pages/Header";
 import SignUp from "pages/SignUp";
-import Sponsors from "pages/Sponsors";
+import Sponsors from "pages/Sponsors/Sponsors";
 
 function App() {
 	return (
