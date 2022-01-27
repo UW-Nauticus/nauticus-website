@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 /**
  * The base border styles for the Material Kit 2 React.
  * You can add new border width, border color or border radius using this file.
- * You can customized the borders value for the entire Material Kit 2 React using thie file.
+ * You can customize the borders value for the entire Material Kit 2 React using this file.
  */
 
 // Material Kit 2 React Base Styles

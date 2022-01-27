@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 /**
  * The base typography styles for the Material Kit 2 React.
  * You can add new typography style using this file.
- * You can customized the typography styles for the entire Material Kit 2 React using thie file.
+ * You can customize the typography styles for the entire Material Kit 2 React using this file.
  */
 
 // Material Kit 2 React Base Styles
