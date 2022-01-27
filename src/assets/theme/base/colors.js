@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 /**
  * The base colors for the Material Kit 2 React.
  * You can add new color using this file.
- * You can customized the colors for the entire Material Kit 2 React using thie file.
+ * You can customize the colors for the entire Material Kit 2 React using this file.
  */
 
 export default {
@@ -179,7 +179,7 @@ export default {
       dark: '#329874',
     },
 
-    dribbble: {
+    dribble: {
       main: '#ea4c89',
       dark: '#e73177',
     },
