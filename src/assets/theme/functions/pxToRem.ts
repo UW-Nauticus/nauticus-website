@@ -14,15 +14,11 @@ Coded by www.creative-tim.com
 */
 
 /**
-  The rgba() function helps you to create a rgba color code, it uses the hexToRgb() function
-  to convert the hex code into rgb for using it inside the rgba color format.
+  The pxToRem() function helps you to convert a px unit into a rem unit, 
  */
 
-// Material Kit 2 React helper functions
-import hexToRgb from './hexToRgb';
-
-function rgba(color, opacity) {
-  return `rgba(${hexToRgb(color)}, ${opacity})`;
+function pxToRem(number: number, baseNumber = 16): string {
+  return `${number / baseNumber}rem`;
 }
 
-export default rgba;
+export default pxToRem;
