@@ -70,13 +70,13 @@ function CenteredFooter({ links, socials }) {
           <MKTypography variant="body2" color="secondary">
             <MKTypography
               component={Link}
-              href="mailto:contact@uwnauticus.com"
+              href="mailto:contact@angler-robotics.com"
               target="_blank"
               rel="noreferrer"
               variant="body2"
               color="secondary"
             >
-              contact@uwnauticus.com
+              contact@angler-robotics.com
             </MKTypography>
           </MKTypography>
         </Grid>
@@ -110,7 +110,7 @@ CenteredFooter.defaultProps = {
     },
     {
       icon: <FontAwesomeIcon icon={['fab', 'github']} size="lg" />,
-      link: 'https://github.com/UW-Nauticus',
+      link: 'https://github.com/angler-robotics',
       name: 'github',
     },
     {
