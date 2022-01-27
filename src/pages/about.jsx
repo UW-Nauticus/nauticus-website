@@ -88,7 +88,7 @@ function About() {
                 target="_blank" // opens in new tab
                 variant="body1"
                 color="white"
-                href="https://github.com/UW-Nauticus"
+                href="https://github.com/angler-robotics"
                 mr={3}
               >
                 <MKBox component={FontAwesomeIcon} color="white" icon={['fab', 'github']} size="2x" />

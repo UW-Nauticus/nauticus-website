@@ -60,7 +60,7 @@ function About() {
               dreamy-eyed students and a team working on a functional ROV drone. They’ve played a key role in our team’s
               every success, and we depend on them to make our vision possible. We’re incredibly grateful to all of our
               sponsors for their generous support. If you’re interested in what we’re building and would like to support
-              us, please get in touch at uwnauticus@gmail.com!
+              us, please get in touch at angler-robotics@gmail.com!
             </MKTypography>
           </Grid>
         </Container>

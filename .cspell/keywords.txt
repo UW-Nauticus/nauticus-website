@@ -1,7 +1,6 @@
 # Things like company names, language keywords, and acronyms.
 visualstudio
 vercel
-nauticus
 weef
 roboto
 noreferrer

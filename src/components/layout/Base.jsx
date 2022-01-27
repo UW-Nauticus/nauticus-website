@@ -88,7 +88,7 @@ function Base(props) {
                 <MKTypography
                   component={Link}
                   target="_blank" // opens in new tab
-                  href="https://github.com/UW-Nauticus"
+                  href="https://github.com/angler-robotics"
                   variant="button"
                   p={1}
                 >
