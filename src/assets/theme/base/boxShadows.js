@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 /**
  * The base box-shadow styles for the Material Kit 2 React.
  * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire Material Kit 2 React using thie file.
+ * You can customize the box-shadow for the entire Material Kit 2 React using this file.
  */
 
 // Material Kit 2 React Base Styles
