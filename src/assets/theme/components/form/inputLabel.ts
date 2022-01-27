@@ -24,7 +24,7 @@ export default {
   styleOverrides: {
     root: {
       fontSize: size.sm,
-      color: text.main,
+      color: text.primary,
       lineHeight: 0.9,
 
       '&.Mui-focused': {

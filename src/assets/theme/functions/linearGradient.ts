@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 /**
-  The pxToRem() function helps you to convert a px unit into a rem unit, 
+  The linearGradient() function helps you to create a linear gradient color background
  */
 
-function pxToRem(number, baseNumber = 16) {
-  return `${number / baseNumber}rem`;
+function linearGradient(color: string, colorState: string, angle = 195): string {
+  return `linear-gradient(${angle}deg, ${color}, ${colorState})`;
 }
 
-export default pxToRem;
+export default linearGradient;

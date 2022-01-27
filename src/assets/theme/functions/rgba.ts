@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 /**
-  The hexToRgb() function helps you to change the hex color code to rgb
-  using chroma-js library.
+  The rgba() function helps you to create a rgba color code, it uses the hexToRgb() function
+  to convert the hex code into rgb for using it inside the rgba color format.
  */
 
-// chroma-js is a library for all kinds of color conversions and color scales.
-import chroma from 'chroma-js';
+// Material Kit 2 React helper functions
+import hexToRgb from './hexToRgb';
 
-function hexToRgb(color) {
-  return chroma(color).rgb().join(', ');
+function rgba(color: string, opacity: number): string {
+  return `rgba(${hexToRgb(color)}, ${opacity})`;
 }
 
-export default hexToRgb;
+export default rgba;

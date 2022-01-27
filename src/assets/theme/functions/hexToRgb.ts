@@ -14,18 +14,15 @@ Coded by www.creative-tim.com
 */
 
 /**
-  The boxShadow() function helps you to create a box shadow for an element
+  The hexToRgb() function helps you to change the hex color code to rgb
+  using chroma-js library.
  */
 
-// Material Kit 2 React helper functions
-import rgba from './rgba';
-import pxToRem from './pxToRem';
+// chroma-js is a library for all kinds of color conversions and color scales.
+import chroma from 'chroma-js';
 
-function boxShadow(offset, radius, color, opacity, inset = '') {
-  const [x, y] = offset;
-  const [blur, spread] = radius;
-
-  return `${inset} ${pxToRem(x)} ${pxToRem(y)} ${pxToRem(blur)} ${pxToRem(spread)} ${rgba(color, opacity)}`;
+function hexToRgb(color: string): string {
+  return chroma(color).rgb().join(', ');
 }
 
-export default boxShadow;
+export default hexToRgb;
