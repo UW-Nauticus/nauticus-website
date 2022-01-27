@@ -39,7 +39,7 @@ function Header() {
               },
             })}
           >
-            UW Nauticus
+            Angler Robotics
           </MKTypography>
           <MKTypography variant="body1" color="white" opacity={0.8} pr={6} mr={6}>
             We make submarine go brr.

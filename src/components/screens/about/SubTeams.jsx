@@ -76,10 +76,10 @@ function SubTeams() {
                 </MKTypography>
                 <br />
                 <MKTypography variant="body2" color="text">
-                  The software team at UW Nauticus writes embedded code to validate and support the hardware systems in
-                  the car. Some projects include writing C-based firmware for the power distribution, battery monitoring
-                  system and driver controls. We also have a telemetry system to monitor various aspects of the car such
-                  as velocity and battery pack voltage.
+                  The software team at Angler Robotics writes embedded code to validate and support the hardware systems
+                  in the car. Some projects include writing C-based firmware for the power distribution, battery
+                  monitoring system and driver controls. We also have a telemetry system to monitor various aspects of
+                  the car such as velocity and battery pack voltage.
                 </MKTypography>
               </Grid>
               <Grid

@@ -11,7 +11,7 @@ import MKTypography from '../components/common/MKTypography';
 
 const footerRoutes = {
   brand: {
-    name: 'UW Nauticus',
+    name: 'Angler Robotics',
     image: 'logo',
     route: '/',
   },
@@ -26,7 +26,7 @@ const footerRoutes = {
     },
     {
       icon: <GitHubIcon />,
-      link: 'https://github.com/UW-Nauticus',
+      link: 'https://github.com/angler-robotics',
     },
     {
       icon: <YouTubeIcon />,

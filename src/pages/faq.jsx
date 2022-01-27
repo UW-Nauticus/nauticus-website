@@ -19,7 +19,7 @@ const QAndAs = [
   {
     question: 'Do I need to have prior experience to join the team?',
     answer:
-      'ABSOLUTELY NOT. UW Nauticus accepts all engineering students from any year. You just have to be committed to learning and helping out. Our team leads are always happy to help any member if they are stuck on a task. Our goal is to help you learn what you need so you can pass it down to future members.',
+      'ABSOLUTELY NOT. Angler Robotics accepts all engineering students from any year. You just have to be committed to learning and helping out. Our team leads are always happy to help any member if they are stuck on a task. Our goal is to help you learn what you need so you can pass it down to future members.',
   },
   {
     question: 'Do I need to physically build the ROV?',
