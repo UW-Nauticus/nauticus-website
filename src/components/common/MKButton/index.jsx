@@ -47,7 +47,7 @@ const MKButtonRoot = styled(Button)(({ theme, ownerState }) => {
     let colorValue = white.main;
 
     if (color === 'default' || !palette[color]) {
-      colorValue = text.main;
+      colorValue = text.primary;
     } else if (color === 'white' || color === 'light') {
       colorValue = dark.main;
     }
@@ -55,8 +55,8 @@ const MKButtonRoot = styled(Button)(({ theme, ownerState }) => {
     // color value when button is focused
     let focusedColorValue = white.main;
 
-    if (color === 'darfault') {
-      focusedColorValue = text.main;
+    if (color === 'default') {
+      focusedColorValue = text.primary;
     } else if (color === 'white') {
       focusedColorValue = dark.main;
     } else if (color === 'primary' || color === 'error' || color === 'dark') {
@@ -88,7 +88,7 @@ const MKButtonRoot = styled(Button)(({ theme, ownerState }) => {
   };
 
   // styles for the button with variant="outlined"
-  const outliedStyles = () => {
+  const outlinedStyles = () => {
     // background color value
     const backgroundValue = color === 'white' ? rgba(white.main, 0.1) : transparent.main;
 
@@ -167,7 +167,7 @@ const MKButtonRoot = styled(Button)(({ theme, ownerState }) => {
     let colorValue = white.main;
 
     if (color === 'white') {
-      colorValue = text.main;
+      colorValue = text.primary;
     } else if (color === 'light') {
       colorValue = gradients.dark.state;
     }
@@ -258,7 +258,7 @@ const MKButtonRoot = styled(Button)(({ theme, ownerState }) => {
 
   return {
     ...(variant === 'contained' && containedStyles()),
-    ...(variant === 'outlined' && outliedStyles()),
+    ...(variant === 'outlined' && outlinedStyles()),
     ...(variant === 'gradient' && gradientStyles()),
     ...(variant === 'text' && textStyles()),
     ...(circular && circularStyles()),

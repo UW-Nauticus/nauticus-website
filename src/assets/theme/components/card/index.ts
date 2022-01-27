@@ -29,16 +29,16 @@ const cardStyle = {
   styleOverrides: {
     root: {
       display: 'flex',
-      flexDirection: 'column',
-      position: 'relative',
+      flexDirection: 'column' as const,
+      position: 'relative' as const,
       minWidth: 0,
-      wordWrap: 'break-word',
+      wordWrap: 'break-word' as const,
       backgroundColor: white.main,
-      backgroundClip: 'border-box',
+      backgroundClip: 'border-box' as const,
       border: `${borderWidth[0]} solid ${rgba(black.main, 0.125)}`,
       borderRadius: borderRadius.xl,
       boxShadow: md,
-      overflow: 'visible',
+      overflow: 'visible' as const,
     },
   },
 };

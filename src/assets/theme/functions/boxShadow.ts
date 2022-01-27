@@ -14,11 +14,18 @@ Coded by www.creative-tim.com
 */
 
 /**
-  The linearGradient() function helps you to create a linear gradient color background
+  The boxShadow() function helps you to create a box shadow for an element
  */
 
-function linearGradient(color, colorState, angle = 195) {
-  return `linear-gradient(${angle}deg, ${color}, ${colorState})`;
+// Material Kit 2 React helper functions
+import rgba from './rgba';
+import pxToRem from './pxToRem';
+
+function boxShadow(offset: number[], radius: number[], color: string, opacity: number, inset = ''): string {
+  const [x, y] = offset;
+  const [blur, spread] = radius;
+
+  return `${inset} ${pxToRem(x)} ${pxToRem(y)} ${pxToRem(blur)} ${pxToRem(spread)} ${rgba(color, opacity)}`;
 }
 
-export default linearGradient;
+export default boxShadow;
