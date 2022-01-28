@@ -80,6 +80,14 @@ function CenteredFooter({ links, socials }) {
             </MKTypography>
           </MKTypography>
         </Grid>
+        <Grid item xs={12} lg={8} sx={{ textAlign: 'center', marginTop: 3, marginBottom: -5 }}>
+          <NextLink href="https://vercel.com?utm_source=angler-robotics&utm_campaign=oss" passHref>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a target="_blank">
+              <Image src="/powered-by-vercel.svg" alt="Powered by Vercel" width={212} height={44} />
+            </a>
+          </NextLink>
+        </Grid>
       </Grid>
     </MKBox>
   );
