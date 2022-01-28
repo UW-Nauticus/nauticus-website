@@ -188,7 +188,7 @@ export default {
       dark: '#329874',
     } as SimplePaletteColorOptions,
 
-    dribble: {
+    dribbble: {
       main: '#ea4c89',
       dark: '#e73177',
     } as SimplePaletteColorOptions,
