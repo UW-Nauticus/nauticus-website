@@ -7,11 +7,13 @@ import Base from '../components/layout/Base';
 import theme from '../assets/theme';
 import '../utils/icons/font-awesome';
 import '../styles/globals.css';
+import CenteredFooter from '../components/layout/Footer';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <Base Child={Component} {...pageProps} />
+      <CenteredFooter />
     </ThemeProvider>
   );
 }

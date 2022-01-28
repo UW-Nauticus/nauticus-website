@@ -39,3 +39,23 @@ The easiest way to deploy your Next.js app is to use the
 from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Sponsors :heart:
+
+<!-- modified from https://github.com/nextauthjs/next-auth -->
+<!--sponsors start-->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <a href="https://vercel.com?utm_source=angler-robotics&utm_campaign=oss" target="_blank">
+          <img width="128px" src="https://avatars.githubusercontent.com/u/14985020?v=4" alt="Vercel Logo" />
+        </a><br />
+        <div>Vercel</div>
+        <sub>☁️ Infrastructure Support</sub>
+      </td>
+    </tr><tr></tr>
+  </tbody>
+</table>
+<br />
+<!--sponsors end-->
