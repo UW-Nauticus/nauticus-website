@@ -1,25 +1,4 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-import {
-  PaletteColorOptions,
-  SimplePaletteColorOptions,
-  TypeBackground,
-  TypeObject,
-  TypeText,
-} from '@mui/material/styles/createPalette';
+import { SimplePaletteColorOptions, TypeBackground, TypeText } from '@mui/material/styles/createPalette';
 import { Color } from '@mui/material';
 
 /**
@@ -34,8 +13,8 @@ export default {
   } as Partial<TypeBackground>,
 
   text: {
-    primary: '#7b809a',
-    focus: '#7b809a',
+    primary: '#aeaeae',
+    focus: '#aeaeae',
   } as Partial<TypeText>,
 
   transparent: {
@@ -43,24 +22,25 @@ export default {
   } as SimplePaletteColorOptions,
 
   white: {
+    dark: '#aeaeae',
     main: '#ffffff',
     focus: '#ffffff',
   } as SimplePaletteColorOptions,
 
   black: {
-    light: '#000000',
+    light: '#111',
     main: '#000000',
     focus: '#000000',
   } as SimplePaletteColorOptions,
 
   primary: {
-    main: '#e91e63',
-    focus: '#e91e63',
+    main: '#b429f9',
+    focus: '#c353fa',
   } as SimplePaletteColorOptions,
 
   secondary: {
-    main: '#7b809a',
-    focus: '#8f93a9',
+    main: '#5a189a',
+    focus: '#5a189a',
   } as SimplePaletteColorOptions,
 
   info: {
@@ -107,8 +87,8 @@ export default {
 
   gradients: {
     primary: {
-      main: '#EC407A',
-      state: '#D81B60',
+      main: '#b429f9',
+      state: '#5a189a',
     } as SimplePaletteColorOptions,
 
     secondary: {

@@ -1,31 +1,13 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
+import colors from './colors';
+import pxToRem from '../functions/pxToRem';
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+const { light } = colors;
 
 /**
  * The base typography styles for the Material Kit 2 React.
  * You can add new typography style using this file.
  * You can customize the typography styles for the entire Material Kit 2 React using this file.
  */
-
-// Material Kit 2 React Base Styles
-import colors from './colors';
-
-// Material Kit 2 React Helper Functions
-import pxToRem from '../functions/pxToRem';
-
-const { dark } = colors;
 
 const baseProperties = {
   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
@@ -46,13 +28,13 @@ const baseProperties = {
 };
 
 const baseHeadingProperties = {
-  color: dark.main,
+  color: light.main,
   fontWeight: baseProperties.fontWeightBold,
 };
 
 const baseDisplayProperties = {
   fontFamily: baseProperties.fontFamily,
-  color: dark.main,
+  color: light.main,
   fontWeight: baseProperties.fontWeightLight,
   lineHeight: 1.2,
 };

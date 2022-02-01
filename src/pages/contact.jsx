@@ -1,26 +1,61 @@
-import React from 'react';
-
-// @mui material components
+import React, { useState } from 'react';
+import Router from 'next/router';
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
+import axios from 'axios';
+import { Alert, AlertTitle } from '@mui/material';
 
-// Material Kit 2 React components
 import MKBox from '../components/common/MKBox';
 import MKTypography from '../components/common/MKTypography';
-import MKInput from '../components/common/MKInput';
-import MKButton from '../components/common/MKButton';
+import ContactForm from '../components/screens/contact/ContactForm';
 
 // Images
-const bgImage = '/images/illustration-reset.jpg';
+const bgImage = '/images/background/contact.jpg';
 
 function Contact() {
+  const [form, setForm] = useState({});
+  const [showAlert, setShowAlert] = useState(null);
+  const [alertType, setAlertType] = useState(null);
+
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const fields = ['name', 'email', 'subject', 'message'];
+    const missingFields = [];
+
+    fields.forEach((field) => {
+      if (form[field] === undefined) {
+        missingFields.push(field);
+      }
+    });
+
+    if (missingFields.length > 0) {
+      setAlertType('error');
+      setShowAlert(`Missing required field(s): ${missingFields.join(', ')}`);
+      return;
+    }
+
+    try {
+      await axios.post('/api/contact', form);
+      setAlertType('success');
+      setShowAlert('Message sent!');
+    } catch (error) {
+      setAlertType('error');
+      setShowAlert('An error occurred. Please try again.');
+    }
+  };
+
   return (
     <MKBox
       minHeight="100vh"
       width="100%"
       sx={{
         backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-          `${linearGradient(rgba(gradients.dark.main, 0.6), rgba(gradients.dark.state, 0.6))}, url(${bgImage})`,
+          `${linearGradient(rgba(gradients.primary.main, 0.2), rgba(gradients.primary.state, 0.7))}, url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'grid',
@@ -31,77 +66,39 @@ function Contact() {
         <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={6}>
             <Card>
-              <MKBox variant="gradient" bgColor="info" coloredShadow="info" borderRadius="lg" p={2} mx={2} mt={-3}>
+              <MKBox bgColor="primary" coloredShadow="primary" borderRadius="lg" p={2} mx={2} mt={-3}>
                 <MKTypography variant="h3" color="white">
                   Contact us
                 </MKTypography>
               </MKBox>
               <MKBox p={3}>
-                <MKTypography variant="body2" color="text" mb={3}>
+                <MKTypography variant="body2" mb={3}>
                   You can send us an email by filling out the form below. Follow us on Social Media for updates!
                 </MKTypography>
-                <MKBox width="100%" component="form" method="post" autocomplete="off">
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} md={6}>
-                      <MKInput
-                        variant="standard"
-                        label="First Name"
-                        InputLabelProps={{
-                          shrink: true,
+                <ContactForm handleSubmit={handleSubmit} handleChange={handleChange} alertType={alertType} />
+                <MKBox height={0}>
+                  {showAlert && (
+                    <MKBox pt={4}>
+                      <Alert
+                        variant="outlined"
+                        severity={alertType}
+                        sx={{
+                          backgroundColor: 'rgba(0,0,0,0.9)',
+                          color: ({ palette: { success, error } }) =>
+                            alertType === 'success' ? `${success.main}` : `${error.main}`,
                         }}
-                        fullWidth
-                      />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <MKInput
-                        variant="standard"
-                        label="Last Name"
-                        InputLabelProps={{
-                          shrink: true,
+                        onClose={() => {
+                          setShowAlert(null);
+                          if (alertType === 'success') {
+                            Router.reload();
+                          }
                         }}
-                        fullWidth
-                      />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <MKInput
-                        type="email"
-                        variant="standard"
-                        label="Email"
-                        InputLabelProps={{
-                          shrink: true,
-                        }}
-                        fullWidth
-                      />
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      <MKInput
-                        variant="standard"
-                        label="Subject"
-                        InputLabelProps={{
-                          shrink: true,
-                        }}
-                        fullWidth
-                      />
-                    </Grid>
-                    <Grid item xs={12}>
-                      <MKInput
-                        variant="standard"
-                        label="How can we help you?"
-                        placeholder="Your Message"
-                        InputLabelProps={{
-                          shrink: true,
-                        }}
-                        multiline
-                        fullWidth
-                        rows={6}
-                      />
-                    </Grid>
-                  </Grid>
-                  <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
-                    <MKButton type="submit" variant="gradient" color="info">
-                      Send Message
-                    </MKButton>
-                  </Grid>
+                      >
+                        <AlertTitle>{alertType.charAt(0).toUpperCase() + alertType.slice(1)}</AlertTitle>
+                        {showAlert}
+                      </Alert>
+                    </MKBox>
+                  )}
                 </MKBox>
               </MKBox>
             </Card>

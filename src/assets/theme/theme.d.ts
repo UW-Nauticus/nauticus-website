@@ -1,4 +1,16 @@
-import { Theme, ThemeOptions } from '@mui/material/styles';
+import { ThemeOptions } from '@mui/material/styles';
+import { Color, PaletteMode } from '@mui/material';
+import {
+  CommonColors,
+  PaletteAugmentColorOptions,
+  PaletteColor,
+  PaletteTonalOffset,
+  TypeAction,
+  TypeBackground,
+  TypeDivider,
+  TypeText,
+} from '@mui/material/styles/createPalette';
+import { FontStyle, TypographyStyle, TypographyUtils, Variant } from '@mui/material/styles/createTypography';
 
 declare module '@mui/material/styles' {
   interface CustomTheme extends Theme {

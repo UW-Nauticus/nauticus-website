@@ -9,3 +9,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+html {
+  background-color: #000000;
+}
+
+/*.link-highlight:hover {*/
+/*  cursor: pointer;*/
+/*  color: #b429f9;*/
+/*  transition: all 0.4s;*/
+/*}*/
