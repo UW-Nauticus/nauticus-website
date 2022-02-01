@@ -1,17 +1,28 @@
 import React from 'react';
+import Head from 'next/head';
 import { ThemeProvider } from '@mui/material/styles';
 import type { AppProps } from 'next/app';
-
-import Base from '../components/layout/Base';
-
 import theme from '../assets/theme';
-import '../utils/icons/font-awesome';
+import '../utils/icons/fontAwesome';
 import '../styles/globals.css';
+
+// Layout
+import Base from '../components/layout/Base';
 import CenteredFooter from '../components/layout/Footer';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <meta charSet="utf-8" />
+        <link rel="icon" href="/icons/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="A student design team for underwater ROVs" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <title>Angler Robotics</title>
+      </Head>
       <Base Child={Component} {...pageProps} />
       <CenteredFooter />
     </ThemeProvider>
