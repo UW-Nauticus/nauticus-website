@@ -1,60 +1,41 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 import React from 'react';
 import NextLink from 'next/link';
-
-// prop-types is a library for typechecking of props
+import Image from 'next/image';
 import PropTypes from 'prop-types';
-
-// @mui material components
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 
-// icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// Material Kit 2 React components
 import MKBox from '../common/MKBox';
 import MKTypography from '../common/MKTypography';
+import routes from '../../utils/routes/routes';
+import IconLink from '../common/icons/IconLink';
 
 function CenteredFooter({ links, socials }) {
   const renderLinks = links.map((link) => (
     <NextLink key={link.name} href={link.href} passHref>
-      <MKTypography component={Link} variant="body2" color="secondary" fontWeight="regular">
+      <MKTypography
+        component={Link}
+        variant="body2"
+        color="white"
+        fontWeight="regular"
+        sx={{
+          transition: 'all 0.2s ease-in-out',
+          '&:hover': {
+            cursor: 'pointer',
+            color: ({ palette: { primary } }) => `${primary.main}`,
+          },
+        }}
+      >
         {link.name}
       </MKTypography>
     </NextLink>
   ));
 
-  const renderSocials = socials.map((social) => (
-    <MKTypography
-      key={social.name}
-      target="_blank" // opens in new tab
-      component={Link}
-      href={social.link}
-      variant="body2"
-      color="secondary"
-      fontWeight="regular"
-    >
-      {social.icon}
-    </MKTypography>
-  ));
+  const renderSocials = socials.map((social) => <IconLink key={social.name} name={social.name} href={social.href} />);
 
   return (
-    <MKBox component="footer" py={6}>
+    <MKBox sx={{ borderTop: '1px solid #333;' }} component="footer" py={6}>
       <Grid container justifyContent="center">
         <Grid item xs={10} lg={8}>
           <Stack direction="row" flexWrap="wrap" justifyContent="center" spacing={{ xs: 2, lg: 3, xl: 6 }} mb={3}>
@@ -67,14 +48,21 @@ function CenteredFooter({ links, socials }) {
           </Stack>
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: 'center' }}>
-          <MKTypography variant="body2" color="secondary">
+          <MKTypography variant="body2" color="text">
             <MKTypography
               component={Link}
               href="mailto:contact@angler-robotics.com"
               target="_blank"
               rel="noreferrer"
               variant="body2"
-              color="secondary"
+              opacity={0.8}
+              sx={{
+                transition: 'all 0.2s ease-in-out',
+                '&:hover': {
+                  cursor: 'pointer',
+                  color: ({ palette: { primary } }) => `${primary.main}`,
+                },
+              }}
             >
               contact@angler-robotics.com
             </MKTypography>
@@ -94,40 +82,17 @@ function CenteredFooter({ links, socials }) {
 }
 
 // Setting default values for the props of CenteredFooter
-CenteredFooter.defaultProps = {
-  links: [
-    { href: '/', name: 'Home' },
-    { href: '/about', name: 'About Us' },
-    {
-      href: '/sponsors',
-      name: 'Sponsors',
-    },
-    { href: '/faq', name: 'FAQ' },
-    { href: '/contact', name: 'Contact Us' },
-  ],
+const footerRoutes = {
   socials: [
+    ...routes.socials,
     {
-      icon: <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" />,
-      link: 'https://www.facebook.com/',
-      name: 'facebook',
-    },
-    {
-      icon: <FontAwesomeIcon icon={['fab', 'instagram']} size="lg" />,
-      link: '/',
-      name: 'instagram',
-    },
-    {
-      icon: <FontAwesomeIcon icon={['fab', 'github']} size="lg" />,
-      link: 'https://github.com/angler-robotics',
+      href: 'https://github.com/angler-robotics',
       name: 'github',
     },
-    {
-      icon: <FontAwesomeIcon icon={['fab', 'youtube']} size="lg" />,
-      link: 'https://www.youtube.com/channel/UClLen4WNvXr1UgWIkF67nTw',
-      name: 'youtube',
-    },
   ],
+  links: [...routes.links],
 };
+CenteredFooter.defaultProps = footerRoutes;
 
 // Typechecking props for the CenteredFooter
 CenteredFooter.propTypes = {

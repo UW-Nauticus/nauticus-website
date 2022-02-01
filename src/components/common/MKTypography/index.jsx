@@ -1,6 +1,4 @@
 import React, { forwardRef } from 'react';
-
-// prop-types is a library for typechecking of props
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
@@ -70,7 +68,7 @@ const MKTypography = forwardRef(
 
 // Setting default values for the props of MKTypography
 MKTypography.defaultProps = {
-  color: 'dark',
+  color: 'white',
   fontWeight: false,
   textTransform: 'none',
   verticalAlign: 'unset',

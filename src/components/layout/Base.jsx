@@ -1,20 +1,14 @@
 import React from 'react';
-
-// @mui material components
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import NextLink from 'next/link';
 
-// icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// Material Kit 2 React components
 import MKBox from '../common/MKBox';
-import MKButton from '../common/MKButton';
 import MKTypography from '../common/MKTypography';
-
-// Images
+import typography from '../../assets/theme/base/typography';
+import routes from '../../utils/routes/routes';
+import IconLink from '../common/icons/IconLink';
 
 function Base(props) {
   // eslint-disable-next-line react/prop-types
@@ -25,20 +19,25 @@ function Base(props) {
         <Container>
           <Grid container flexDirection="row" alignItems="center">
             <NextLink href="/" passHref>
-              <MKTypography component={Link} variant="button" color="white" fontWeight="regular" py={0.8125} mr={2}>
-                TEAM LOGO HERE
+              <MKTypography
+                component={Link}
+                variant="button"
+                color="white"
+                fontWeight="regular"
+                fontSize={typography.size.lg}
+                py={1}
+                mr={2}
+                sx={{
+                  transition: 'all 0.2s ease-in-out',
+                  '&:hover': {
+                    cursor: 'pointer',
+                    color: ({ palette: { primary } }) => `${primary.main}`,
+                  },
+                }}
+              >
+                ANGLER ROBOTICS
               </MKTypography>
             </NextLink>
-            <MKButton
-              variant="outlined"
-              color="white"
-              sx={{
-                display: { xs: 'block', lg: 'none' },
-                ml: 'auto',
-              }}
-            >
-              <MKBox component={FontAwesomeIcon} color="white" icon={['fas', 'bars']} />
-            </MKButton>
             <MKBox
               component="ul"
               display={{ xs: 'none', lg: 'flex' }}
@@ -47,77 +46,38 @@ function Base(props) {
               mx="auto"
               sx={{ listStyle: 'none' }}
             >
-              <MKBox component="li">
-                <NextLink href="/about" passHref>
-                  <MKTypography component={Link} variant="button" color="white" fontWeight="regular" p={1}>
-                    About
-                  </MKTypography>
-                </NextLink>
-              </MKBox>
-              <MKBox component="li">
-                <NextLink href="/join" passHref>
-                  <MKTypography component={Link} variant="button" color="white" fontWeight="regular" p={1}>
-                    Sign Up
-                  </MKTypography>
-                </NextLink>
-              </MKBox>
-              <MKBox component="li">
-                <NextLink href="/sponsors" passHref>
-                  <MKTypography component={Link} variant="button" color="white" fontWeight="regular" p={1}>
-                    Sponsors
-                  </MKTypography>
-                </NextLink>
-              </MKBox>
-              <MKBox component="li">
-                <NextLink href="/faq" passHref>
-                  <MKTypography component={Link} variant="button" color="white" fontWeight="regular" p={1}>
-                    FAQ
-                  </MKTypography>
-                </NextLink>
-              </MKBox>
-              <MKBox component="li">
-                <NextLink href="/contact" passHref>
-                  <MKTypography component={Link} variant="button" color="white" fontWeight="regular" p={1}>
-                    Contact
-                  </MKTypography>
-                </NextLink>
-              </MKBox>
+              {routes.links.map((route) => (
+                <MKBox key={route.name} component="li">
+                  <NextLink href={route.href} passHref>
+                    <MKTypography
+                      component={Link}
+                      variant="button"
+                      color="white"
+                      fontWeight="regular"
+                      fontSize={typography.size.md}
+                      p={1}
+                      sx={{
+                        transition: 'all 0.2s ease-in-out',
+                        '&:hover': {
+                          cursor: 'pointer',
+                          color: ({ palette: { primary } }) => `${primary.main}`,
+                        },
+                      }}
+                    >
+                      {route.name}
+                    </MKTypography>
+                  </NextLink>
+                </MKBox>
+              ))}
             </MKBox>
-            <MKBox component="ul" display={{ xs: 'none', lg: 'flex' }} p={0} m={0} sx={{ listStyle: 'none' }}>
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  target="_blank" // opens in new tab
-                  href="https://github.com/angler-robotics"
-                  variant="button"
-                  p={1}
-                >
-                  <MKBox component={FontAwesomeIcon} color="white" icon={['fab', 'github']} size="lg" />
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                {/* TODO add instagram link */}
-                <MKTypography
-                  component={Link}
-                  target="_blank" // opens in new tab
-                  href="#"
-                  variant="button"
-                  p={1}
-                >
-                  <MKBox component={FontAwesomeIcon} color="white" icon={['fab', 'instagram']} size="lg" />
-                </MKTypography>
-              </MKBox>
-              <MKBox component="li">
-                <MKTypography
-                  component={Link}
-                  target="_blank" // opens in new tab
-                  href="https://www.youtube.com/channel/UClLen4WNvXr1UgWIkF67nTw"
-                  variant="button"
-                  p={1}
-                >
-                  <MKBox component={FontAwesomeIcon} color="white" icon={['fab', 'youtube']} size="lg" />
-                </MKTypography>
-              </MKBox>
+            <MKBox component="ul" display={{ xs: 'none', lg: 'flex' }} pl={4} m={0} sx={{ listStyle: 'none' }}>
+              <Grid container spacing={1}>
+                {routes.socials.map((social) => (
+                  <Grid key={social.name} item>
+                    <IconLink name={social.name} href={social.href} size="2x" />
+                  </Grid>
+                ))}
+              </Grid>
             </MKBox>
           </Grid>
         </Container>
