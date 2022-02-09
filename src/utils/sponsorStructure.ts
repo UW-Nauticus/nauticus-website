@@ -20,4 +20,9 @@ export default [
     logo: '/images/sponsors/engsoc.png',
     href: 'https://www.engsoc.uwaterloo.ca/',
   },
+  {
+    name: 'Vercel',
+    logo: '/images/sponsors/vercel.svg',
+    href: 'https://vercel.com?utm_source=angler-robotics&utm_campaign=oss',
+  },
 ] as Array<Sponsor>;
