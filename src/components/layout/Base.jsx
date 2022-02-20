@@ -9,6 +9,7 @@ import MKTypography from '../common/MKTypography';
 import typography from '../../assets/theme/base/typography';
 import routes from '../../utils/routes/routes';
 import IconLink from '../common/icons/IconLink';
+import Menu from './Menu';
 
 function Base(props) {
   // eslint-disable-next-line react/prop-types
@@ -17,68 +18,70 @@ function Base(props) {
     <MKBox component="header" position="relative">
       <MKBox component="nav" position="absolute" top="0.5rem" width="100%">
         <Container>
-          <Grid container flexDirection="row" alignItems="center">
-            <NextLink href="/" passHref>
-              <MKTypography
-                component={Link}
-                variant="button"
-                color="white"
-                fontWeight="regular"
-                fontSize={typography.size.lg}
-                py={1}
-                mr={2}
-                sx={{
-                  transition: 'all 0.2s ease-in-out',
-                  '&:hover': {
-                    cursor: 'pointer',
-                    color: ({ palette: { primary } }) => `${primary.main}`,
-                  },
-                }}
-              >
-                ANGLER ROBOTICS
-              </MKTypography>
-            </NextLink>
-            <MKBox
-              component="ul"
-              display={{ xs: 'none', lg: 'flex' }}
-              p={0}
-              my={0}
-              mx="auto"
-              sx={{ listStyle: 'none' }}
-            >
-              {routes.links.map((route) => (
-                <MKBox key={route.name} component="li">
-                  <NextLink href={route.href} passHref>
-                    <MKTypography
-                      component={Link}
-                      variant="button"
-                      color="white"
-                      fontWeight="regular"
-                      fontSize={typography.size.md}
-                      p={1}
-                      sx={{
-                        transition: 'all 0.2s ease-in-out',
-                        '&:hover': {
-                          cursor: 'pointer',
-                          color: ({ palette: { primary } }) => `${primary.main}`,
-                        },
-                      }}
-                    >
-                      {route.name}
-                    </MKTypography>
-                  </NextLink>
-                </MKBox>
-              ))}
-            </MKBox>
-            <MKBox component="ul" display={{ xs: 'none', lg: 'flex' }} pl={4} m={0} sx={{ listStyle: 'none' }}>
-              <Grid container spacing={1}>
-                {routes.socials.map((social) => (
-                  <Grid key={social.name} item>
-                    <IconLink name={social.name} href={social.href} size="2x" />
-                  </Grid>
+          <Grid container alignItems="center" flexDirection="row">
+            <Grid item>
+              <NextLink href="/" passHref>
+                <MKTypography
+                  component={Link}
+                  variant="button"
+                  color="white"
+                  fontWeight="regular"
+                  fontSize={typography.size.lg}
+                  py={1}
+                  mr={2}
+                  sx={{
+                    transition: 'all 0.2s ease-in-out',
+                    '&:hover': {
+                      cursor: 'pointer',
+                      color: ({ palette: { primary } }) => `${primary.main}`,
+                    },
+                  }}
+                >
+                  ANGLER ROBOTICS
+                </MKTypography>
+              </NextLink>
+            </Grid>
+            <Grid item sx={{ mx: 'auto', py: 0, my: 0, px: { md: 0, lg: 15 } }}>
+              <MKBox component="ul" display={{ xs: 'none', sm: 'block', md: 'flex' }} sx={{ listStyle: 'none' }}>
+                {routes.links.map((route) => (
+                  <MKBox key={route.name} component="li">
+                    <NextLink href={route.href} passHref>
+                      <MKTypography
+                        component={Link}
+                        variant="button"
+                        color="white"
+                        fontWeight="regular"
+                        fontSize={typography.size.md}
+                        p={1}
+                        sx={{
+                          transition: 'all 0.2s ease-in-out',
+                          '&:hover': {
+                            cursor: 'pointer',
+                            color: ({ palette: { primary } }) => `${primary.main}`,
+                          },
+                        }}
+                      >
+                        {route.name}
+                      </MKTypography>
+                    </NextLink>
+                  </MKBox>
                 ))}
-              </Grid>
-            </MKBox>
+              </MKBox>
+            </Grid>
+            <Grid item mx="auto">
+              <MKBox component="ul" display={{ xs: 'none', sm: 'block', md: 'flex' }} m={0} sx={{ listStyle: 'none' }}>
+                <Grid container spacing={1}>
+                  {routes.socials.map((social) => (
+                    <Grid key={social.name} item>
+                      <IconLink name={social.name} href={social.href} size="2x" />
+                    </Grid>
+                  ))}
+                </Grid>
+              </MKBox>
+            </Grid>
+            <Grid Item variant="temporary">
+              <Menu />
+            </Grid>
           </Grid>
         </Container>
       </MKBox>

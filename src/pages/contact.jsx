@@ -60,6 +60,7 @@ function Contact() {
         backgroundPosition: 'center',
         display: 'grid',
         placeItems: 'center',
+        py: { xs: 20, sm: 10, md: 0 },
       }}
     >
       <MKBox width="100%" mx="auto" position="relative">

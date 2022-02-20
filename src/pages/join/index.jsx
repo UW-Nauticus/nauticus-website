@@ -36,7 +36,7 @@ function Join() {
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
-            sx={{ mx: 'auto', textAlign: 'center' }}
+            sx={{ py: { xs: 10, sm: 20, md: 0 }, mx: 'auto', px: { xs: 2, sm: 0 }, textAlign: 'center' }}
           >
             <MKTypography
               variant="h1"
@@ -64,7 +64,7 @@ function Join() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <MKBox component="section" pt={12}>
+        <MKBox component="section" sx={{ pt: { xs: 5, sm: 10, md: 12 } }}>
           <Container>
             <Grid container>
               <JoinIntro />

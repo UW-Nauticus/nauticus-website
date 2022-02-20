@@ -43,7 +43,7 @@ function Team() {
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
-            sx={{ mx: 'auto', textAlign: 'center' }}
+            sx={{ py: { xs: 10, sm: 20, md: 0 }, mx: 'auto', textAlign: 'center' }}
           >
             <MKTypography
               variant="h1"
@@ -74,15 +74,17 @@ function Team() {
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
-          mt: -8,
+          mt: { xs: -5, sm: -6, md: -8 },
           mb: 8,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />
-        <SubTeams />
-        <TeamMembers />
-        <Sponsors />
+        <MKBox sx={{ pt: { xs: -10, sm: -5, md: 0 } }}>
+          <Information />
+          <SubTeams />
+          <TeamMembers />
+          <Sponsors />
+        </MKBox>
       </Card>
     </>
   );
