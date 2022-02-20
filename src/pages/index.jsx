@@ -4,7 +4,6 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
-import Box from '@mui/material/Box';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import MKBox from '../components/common/MKBox';
@@ -25,7 +24,7 @@ function Header() {
 
   return (
     <>
-      <Box
+      <MKBox
         display="flex"
         alignItems="center"
         minHeight="100vh"
@@ -38,7 +37,16 @@ function Header() {
         }}
       >
         <Container>
-          <Grid container item xs={12} md={7} lg={6} flexDirection="column" justifyContent="center">
+          <Grid
+            container
+            item
+            xs={12}
+            md={7}
+            lg={6}
+            flexDirection="column"
+            justifyContent="center"
+            sx={{ py: { xs: 10, sm: 20, md: 0 }, ml: { xs: 2, sm: 5, md: 0 } }}
+          >
             <MKTypography
               variant="h1"
               color="white"
@@ -66,8 +74,8 @@ function Header() {
             </Stack>
           </Grid>
         </Container>
-      </Box>
-      <MKBox display="flex" justifyContent="center" mt={-32} mb={34}>
+      </MKBox>
+      <MKBox display="flex" justifyContent="center" mt={-32} mb={34} sx={{ pt: { xs: 15, sm: 10, md: 0 } }}>
         <MKTypography
           onClick={() => scrollToRef(cardRef)}
           variant="body2"
@@ -89,7 +97,6 @@ function Header() {
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
-          mt: 8,
           mb: 8,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}

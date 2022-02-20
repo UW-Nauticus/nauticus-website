@@ -41,7 +41,7 @@ function SponsorPage() {
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
-            sx={{ mx: 'auto', textAlign: 'center' }}
+            sx={{ py: { xs: 10, sm: 20, md: 0 }, mx: 'auto', px: { xs: 2, sm: 0 }, textAlign: 'center' }}
           >
             <MKTypography
               variant="h1"
