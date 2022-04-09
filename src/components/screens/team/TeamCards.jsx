@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 
@@ -14,14 +15,15 @@ function TeamCard({ image, name, position, socials }) {
         <Grid item xs={12} md={6} lg={4} sx={{ mt: -6 }}>
           <MKBox width="100%" pt={2} pb={1} px={2}>
             <MKBox
-              component="img"
-              src={image}
-              alt={name}
-              width="100%"
+              width="9em"
+              height="9em"
               borderRadius="100%"
               shadow="lg"
-              sx={{ border: '2px solid #333;' }}
-            />
+              overflow="hidden"
+              sx={{ border: '2px solid #333;', position: 'relative' }}
+            >
+              <Image layout="fill" src={image} />
+            </MKBox>
           </MKBox>
         </Grid>
         <Grid item xs={12} md={6} lg={8} sx={{ my: 'auto' }}>
