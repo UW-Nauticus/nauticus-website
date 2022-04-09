@@ -7,7 +7,7 @@ import MKBox from '../../common/MKBox';
 import TextLink from '../../common/TextLink';
 
 function Mission() {
-  const competitionLink = <TextLink href="https://materovcompetition.org/" text="MATE ROV Competition" />;
+  const competitionLink = <TextLink href="https://robonation.org/programs/robosub/" text="RoboSub Competition" />;
 
   return (
     <MKBox component="section" pt={12}>
@@ -17,8 +17,8 @@ function Mission() {
             <MKTypography variant="h3">Our Mission</MKTypography>
             <br />
             <MKTypography variant="body1">
-              Our mission is to design and build an underwater remotely operated vehicle (ROV) with partial-autonomous
-              capabilities by the end of Q1 2023 to compete in the {competitionLink}.
+              Our mission is to design and build an autonomous underwater vehicle (AUV) by the end of Q1 2023 to compete
+              in the {competitionLink}.
             </MKTypography>
           </Grid>
         </Grid>

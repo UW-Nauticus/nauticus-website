@@ -56,7 +56,7 @@ function SponsorPage() {
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
               This team would not be possible without our sponsors. Our sponsors are the difference between a group of
-              dreamy-eyed students and a team working on a functional ROV. They’ve played a key role in our team’s every
+              dreamy-eyed students and a team working on a functional AUV. They’ve played a key role in our team’s every
               success, and we depend on them to make our vision possible. We’re incredibly grateful to all of our
               sponsors for their generous support. <br />
               <br />

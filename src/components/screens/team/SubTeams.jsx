@@ -25,8 +25,8 @@ function SubTeams() {
                 </MKTypography>
                 <br />
                 <MKTypography variant="body2">
-                  The Mechanical team is responsible for designing, manufacturing, and validating the frame of the ROV,
-                  the enclosure for the electronics, and the ROV&apos;s primary tools. This includes waterproofing,
+                  The Mechanical team is responsible for designing, manufacturing, and validating the frame of the AUV,
+                  the enclosure for the electronics, and the AUV&apos;s primary tools. This includes waterproofing,
                   hydrodynamic simulations, and electrical integration.
                 </MKTypography>
               </Grid>
@@ -58,11 +58,10 @@ function SubTeams() {
                 </MKTypography>
                 <br />
                 <MKTypography variant="body2">
-                  The Controls team combines electronics and software to provide function to the ROV and establish a
-                  link between the pilot and the ROV. They&apos;re in charge of all custom PCBs and off-the-shelf
-                  electronics in the ROV, as well as the electronics on the surface-side control station. They&apos;re
-                  also responsible for all the software used by the ROV, from the GUI for that the pilot uses to the
-                  embedded software for the main ROV systems and onboard sensors.
+                  The Controls team combines electronics and software to provide function to the AUV. They&apos;re in
+                  charge of all custom PCBs and off-the-shelf electronics in the AUV. They&apos;re also responsible for
+                  all the software used by the AUV, from the onboard computer vision software to the embedded software
+                  for the main AUV systems and onboard sensors.
                 </MKTypography>
               </Grid>
               <Grid item xs={12} md={6}>

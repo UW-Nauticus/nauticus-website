@@ -18,7 +18,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <link rel="icon" href="/icons/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A student design team for underwater ROVs" />
+        <meta
+          name="description"
+          content="A University of Waterloo student design team for autonomous underwater vehicles"
+        />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <title>Angler Robotics</title>
