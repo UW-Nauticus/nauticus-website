@@ -39,7 +39,7 @@ export default [
       },
       {
         name: 'Adrian Jendo',
-        role: 'CFO, Administration Lead',
+        role: 'CFO, Business Lead',
         image: '/images/team/adrian-jendo.jpg',
         socials: [linkedin('adrian-jendo'), github('AdrianJendo')],
       },
@@ -54,6 +54,24 @@ export default [
         role: 'Mechanical Lead',
         image: '/images/team/allen-zhang.png',
         socials: [linkedin('allen-zhang-5764b8189')],
+      },
+    ],
+  },
+  {
+    name: 'Mechanical Team',
+    description: 'The Mechanical Team designs the body and all tools on the AUV.',
+    members: [
+      {
+        name: 'Alex Conte',
+        role: 'Mechanical Team Member',
+        image: '/images/team/alex-conte.jpg',
+        socials: [linkedin('alex-conte-0680a6194')],
+      },
+      {
+        name: 'Max Casey',
+        role: 'Mechanical Team Member',
+        image: '/images/team/max-casey.jpg',
+        socials: [linkedin('maximus-casey-357916199')],
       },
     ],
   },
