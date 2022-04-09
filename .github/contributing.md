@@ -17,6 +17,9 @@ Please see [this guide](https://cbea.ms/git-commit/) on how to write good commit
 
 Update the exported array in [teamStructure.ts](../src/utils/teamStructure.ts) following the defined types.
 
+Team member photos will be resized to have a 1:1 aspect ratio, so you should pre-crop any photos to prevent them from
+being squished.
+
 ### New Sponsors
 
 Update the exported array in [sponsorStructure.ts](../src/utils/sponsorStructure.ts) following the defined types.
