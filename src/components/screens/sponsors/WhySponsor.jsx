@@ -17,10 +17,10 @@ function Information() {
             <br />
             <MKTypography variant="body1">
               Angler Robotics is more than a student project. We strive to empower individuals while designing the most
-              innovative and efficient ROV drone. Every contribution plays a key role in maintaining the success of our
-              team and future ROVs. Our supporters are at the centre of what we do and we make it well known on campus
-              and at competition events that they are an invaluable part of our team. Without the help from our
-              supporters, achieving and fulfilling our dreams would not be possible.
+              innovative and efficient AUV. Every contribution plays a key role in maintaining the success of our team
+              and future AUVs. Our supporters are at the centre of what we do and we make it well known on campus and at
+              competition events that they are an invaluable part of our team. Without the help from our supporters,
+              achieving and fulfilling our dreams would not be possible.
             </MKTypography>
             <br />
             <MKTypography variant="body1">

@@ -60,7 +60,7 @@ function Header() {
               Angler Robotics
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mr={6}>
-              Diving into the world of underwater ROVs.
+              Diving into the world of AUVs.
             </MKTypography>
             <Stack direction="row" spacing={1} mt={3}>
               <Link href="/join" passHref>
