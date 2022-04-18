@@ -25,4 +25,9 @@ export default [
     logo: '/images/sponsors/vercel.svg',
     href: 'https://vercel.com?utm_source=angler-robotics&utm_campaign=oss',
   },
+  {
+    name: 'Altium',
+    logo: '/images/sponsors/altium.svg',
+    href: 'https://www.altium.com/',
+  },
 ] as Array<Sponsor>;
