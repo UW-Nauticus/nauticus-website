@@ -6,7 +6,7 @@ interface Sponsor {
 
 export default [
   {
-    name: 'University of Waterloo Faculty of Engineering',
+    name: 'Waterloo Faculty of Engineering',
     logo: '/images/sponsors/waterloo-engineering.png',
     href: 'https://uwaterloo.ca/engineering/',
   },
