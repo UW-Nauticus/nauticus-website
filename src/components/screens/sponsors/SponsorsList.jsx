@@ -9,6 +9,8 @@ import MKTypography from '../../common/MKTypography';
 import sponsorStructure from '../../../utils/sponsorStructure';
 
 function Sponsors() {
+  // Sort alphabetically.
+  sponsorStructure.sort((a, b) => a.name.localeCompare(b.name));
   const sponsors = sponsorStructure.map((sponsor) => {
     // TODO fix this to follow rules of hooks
     // eslint-disable-next-line react-hooks/rules-of-hooks
