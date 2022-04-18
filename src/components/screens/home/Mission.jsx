@@ -7,7 +7,9 @@ import MKBox from '../../common/MKBox';
 import TextLink from '../../common/TextLink';
 
 function Mission() {
-  const competitionLink = <TextLink href="https://robonation.org/programs/robosub/" text="RoboSub Competition" />;
+  const competitionLink = (
+    <TextLink href="https://robonation.org/programs/robosub/" text="RoboNation RoboSub Competition" />
+  );
 
   return (
     <MKBox component="section" pt={12}>
