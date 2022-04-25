@@ -79,7 +79,7 @@ function Base(props) {
                 </Grid>
               </MKBox>
             </Grid>
-            <Grid Item variant="temporary">
+            <Grid item variant="temporary">
               <Menu />
             </Grid>
           </Grid>
