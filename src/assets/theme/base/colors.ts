@@ -39,8 +39,8 @@ export default {
   } as SimplePaletteColorOptions,
 
   secondary: {
-    main: '#5a189a',
-    focus: '#5a189a',
+    main: '#5A0F82',
+    focus: '#5A0F82',
   } as SimplePaletteColorOptions,
 
   info: {
@@ -88,7 +88,7 @@ export default {
   gradients: {
     primary: {
       main: '#b429f9',
-      state: '#5a189a',
+      state: '#5A0F82',
     } as SimplePaletteColorOptions,
 
     secondary: {
