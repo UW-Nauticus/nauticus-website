@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import Image from 'next/image';
 import MKBox from '../components/common/MKBox';
 import MKButton from '../components/common/MKButton';
 import MKTypography from '../components/common/MKTypography';
@@ -30,49 +31,51 @@ function Header() {
         minHeight="100vh"
         sx={{
           backgroundImage: ({ palette: { gradients }, functions: { linearGradient, rgba } }) =>
-            `${linearGradient(rgba(gradients.primary.main, 0.2), rgba(gradients.primary.state, 0.7))}, url(${bgImage})`,
+            `${linearGradient(rgba(gradients.primary.main, 0.3), rgba(gradients.primary.state, 0.7))}, url(${bgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
           borderBottom: '2px solid #333;',
         }}
       >
         <Container>
-          <Grid
-            container
-            item
-            xs={12}
-            md={7}
-            lg={6}
-            flexDirection="column"
-            justifyContent="center"
-            sx={{ py: { xs: 10, sm: 20, md: 0 }, ml: { xs: 2, sm: 5, md: 0 } }}
-          >
-            <MKTypography
-              variant="h1"
-              color="white"
-              mb={3}
-              sx={({ breakpoints, typography: { size } }) => ({
-                [breakpoints.down('md')]: {
-                  fontSize: size['3xl'],
-                },
-              })}
+          <Stack direction="row">
+            <Grid
+              container
+              item
+              xs={12}
+              md={7}
+              flexDirection="column"
+              justifyContent="center"
+              sx={{ py: { xs: 10, sm: 20, md: 0 }, ml: { xs: 2, sm: 5, md: 0 } }}
             >
-              Angler Robotics
-            </MKTypography>
-            <MKTypography variant="body1" color="white" opacity={0.8} mr={6}>
-              Diving into the world of AUVs.
-            </MKTypography>
-            <Stack direction="row" spacing={1} mt={3}>
-              <Link href="/join" passHref>
-                <MKButton color="white">Join Us</MKButton>
-              </Link>
-              <Link href="/team" passHref>
-                <MKButton variant="text" color="white">
-                  Meet the Team
-                </MKButton>
-              </Link>
-            </Stack>
-          </Grid>
+              <MKTypography
+                variant="h1"
+                color="white"
+                mb={3}
+                sx={({ breakpoints, typography: { size } }) => ({
+                  [breakpoints.down('md')]: {
+                    fontSize: size['3xl'],
+                  },
+                })}
+              >
+                Angler Robotics
+              </MKTypography>
+              <MKTypography variant="body1" color="white" opacity={0.8} mr={6}>
+                Diving into the world of AUVs.
+              </MKTypography>
+              <Stack direction="row" spacing={1} mt={3}>
+                <Link href="/join" passHref>
+                  <MKButton color="white">Join Us</MKButton>
+                </Link>
+                <Link href="/team" passHref>
+                  <MKButton variant="text" color="white">
+                    Meet the Team
+                  </MKButton>
+                </Link>
+              </Stack>
+            </Grid>
+            <Image width={200} height={200} src="/angler-logo.svg" />
+          </Stack>
         </Container>
       </MKBox>
       <MKBox display="flex" justifyContent="center" mt={-32} mb={34} sx={{ pt: { xs: 15, sm: 10, md: 0 } }}>
