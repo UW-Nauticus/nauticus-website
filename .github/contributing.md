@@ -33,7 +33,7 @@ Update the exported array in [sponsorStructure.ts](../src/utils/sponsorStructure
 | Titles, Headers, Text Primary | `#FFFFFF`               | `white`               |
 | Sub-titles, Text Secondary    | `#FFFFFF` (80% opacity) | `white` (80% opacity) |
 | Purple Primary                | `#B429F9`               | `primary`             |
-| Purple Secondary              | `#5A189A`               | `secondary`           |
+| Purple Secondary              | `#5A0F82`               | `secondary`           |
 | BG Primary                    | `#000000`               | `black.main`          |
 | BG Secondary                  | `#111111`               | `black.light`         |
 
