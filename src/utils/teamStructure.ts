@@ -45,7 +45,7 @@ export default [
       },
       {
         name: 'Adam Barroso',
-        role: 'Software and Electrical Lead',
+        role: 'Controls Lead',
         image: '/images/team/adam-barroso.jpg',
         socials: [linkedin('adam-barroso-804357172'), github('ABarroso647')],
       },
