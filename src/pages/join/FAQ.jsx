@@ -12,7 +12,7 @@ import TextLink from '../../components/common/TextLink';
 import MKButton from '../../components/common/MKButton';
 
 // Images
-const bgImage = '/images/background/faq.jpg';
+const bgImage = '/images/background/allen-zhang-totally-working.jpg';
 
 const QAndAs = [
   {
@@ -72,7 +72,7 @@ function FAQ() {
         width="100%"
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-            `${linearGradient(rgba(gradients.primary.main, 0.2), rgba(gradients.primary.state, 0.7))}, url(${bgImage})`,
+            `${linearGradient(rgba(gradients.primary.main, 0.4), rgba(gradients.primary.state, 0.8))}, url(${bgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'grid',
