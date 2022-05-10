@@ -22,7 +22,7 @@ function SubTeams() {
         "They're in charge of all custom PCBs and off-the-shelf electronics in the AUV. " +
         "They're also responsible for all the software used by the AUV, " +
         'from the onboard computer vision software to the embedded software for the main AUV systems and onboard sensors.',
-      image: '/images/subteams/software.png',
+      image: '/images/subteams/controls.png',
     },
     {
       name: 'Business',
